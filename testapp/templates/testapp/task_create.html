@@ -1,0 +1,28 @@
+<!-- This is the task add page -->
+{% extends "main/base_layout.html" %}
+
+{# override block title #}
+
+{% block title %}
+    Task Create
+{% endblock %}
+
+{# override body #}
+{% block main-content %}
+
+    <h4 class="display-6">Create Task</h4>
+
+    <form method="post" action="{% url 'task_create' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Task</button>
+    </form>
+
+{% endblock %}

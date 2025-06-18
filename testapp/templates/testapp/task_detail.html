@@ -1,0 +1,29 @@
+{% extends "main/base_layout.html" %}
+
+{# override block title #}
+
+{% block title %}
+    {{task.title}}
+{% endblock %}
+
+{# override body #}
+
+{% block main-content %}
+
+    <h4 class="display-6">Task Details</h4>
+
+    <div class="card mb-3">
+        <div class="card-body row d-flex">
+            <div class="col-6 col-md-4 align-self-start">
+                <h5 class="card-title">{{ task.title }}</h5>
+                <p class="card-text">{{ task.description }}</p>
+            </div>
+                <div class=" col-8 align-self-end text-end">
+                <input class="form-check-input" type="checkbox" value="{{task.done}}" id="flexCheckDefault{{task.id}}" title="Mark task as done">
+            </div>
+        </div>
+    </div>
+    <div class="col-12 align-self-end text-end">
+        <a href="{% url 'task_list' %}" class="btn btn-secondary">Back</a>
+    </div>
+{% endblock %}

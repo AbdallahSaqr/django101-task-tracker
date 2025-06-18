@@ -1,0 +1,28 @@
+<!-- This is the task update page -->
+{% extends "main/base_layout.html" %}
+
+{# override block title #}
+
+{% block title %}
+    Task Update
+{% endblock %}
+
+{# override body #}
+{% block main-content %}
+
+    <h4 class="display-6">Update Task</h4>
+    <form method="post" action="{% url 'task_update' task.id %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" value="{{ task.title }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" name="description" rows="3">{{ task.description }}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Task</button>
+        <a href="{% url 'task_list' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+
+{% endblock %}
