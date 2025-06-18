@@ -24,25 +24,25 @@ This project helped me understand the basics of:
 ## How to Run It Locally
 
 1. **Clone the repository:**
-   ```bash
+   ```
    git clone https://github.com/your-username/django101-task-tracker.git
    cd django101-task-tracker
    
 2. **Create a virtual environment:**
-```
-python -m venv env
-env\Scripts\activate
-```
+   ```
+   python -m venv env
+   env\Scripts\activate
+   ```
 3. **Install Django:**
-```
-pip install django
-```
+   ```
+   pip install django
+   ```
 4. **Run the development server:**
-```
-python manage.py runserver
-```
+   ```
+   python manage.py runserver
+   ```
 5. **Open in browser:**
-Visit http://127.0.0.1:8000/
+   Visit http://127.0.0.1:8000/
 
 Notes
 This app stores tasks in-memory using Python lists, so all tasks will reset when the server restarts. It's intentionally simple to focus on Django fundamentals.
