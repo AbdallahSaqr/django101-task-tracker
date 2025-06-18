@@ -24,21 +24,21 @@ This project helped me understand the basics of:
 ## How to Run It Locally
 
 1. **Clone the repository:**
-   ```
+   ```bash
    git clone https://github.com/your-username/django101-task-tracker.git
    cd django101-task-tracker
    
 2. **Create a virtual environment:**
-   ```
+   ```bash
    python -m venv env
    env\Scripts\activate
    ```
 3. **Install Django:**
-   ```
+   ```bash
    pip install django
    ```
 4. **Run the development server:**
-   ```
+   ```bash
    python manage.py runserver
    ```
 5. **Open in browser:**
